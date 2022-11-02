@@ -5,12 +5,27 @@ const test = new Prompt({
         {
             name: 'install',
             aliases: ['i'],
-            description: `Install a package`
+            description: `Install a package`,
+            required: true,
+            type: 'any',
+            options: [
+                {
+                    name: 'global',
+                    aliases: ['g'],
+                    description: 'Install a package globaly',
+                    type: 'boolean',
+                    action: ({value, commandValue}) => console.log(value, commandValue)
+                }
+            ]
         }
-    ]
+    ],
+    prefix: {
+        large: '~~',
+        short: '@'
+    }
 });
 
-process.on('uncaughtException', (error) => {console.log(error.message);process.exit()});
-let interaction = test.reply();
-
-console.log(interaction)
+try {
+    let interaction = test.reply();
+    console.log(interaction);
+} catch(e) {console.log(e.message);process.exit();}
