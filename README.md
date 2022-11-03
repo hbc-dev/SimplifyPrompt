@@ -14,7 +14,7 @@ With this class, you can create your own prompt.
 
 > Check the [types](#types) part to see more information
 
-## `<prompt>.addCommands(...commands):`[PromptProps](#promptprops)
+## `<prompt>.addCommands(...commands):this`
 Add commands to the prompt.
 
 | Param | Description | Default | Type |

@@ -1,6 +1,6 @@
 {
   "name": "simplifyprompt",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A package for create a simle prompt",
   "main": "src/Prompt.js",
   "directories": {

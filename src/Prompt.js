@@ -99,7 +99,7 @@ class Prompt {
      * @param {PrefixOptions} options.prefix The prefix of this prompt
      * @param {PromptOptions} options.options The options of this prompt
      */
-    constructor({commands = [], prefix, options = {}} = {}) {
+    constructor({commands = [], prefix = {}, options = {}} = {}) {
         if (!Array.isArray(commands))
             throw new error(`The "commands" property must be an array`);
         if (typeof prefix !== 'object')
